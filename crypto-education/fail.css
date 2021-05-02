@@ -1,0 +1,60 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+.triangle-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 150px solid transparent;
+    border-left: 150px solid tomato;
+    border-top: 150px solid tomato;
+}
+.triangle-bottom {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border: 150px solid transparent;
+    border-right: 150px solid tomato;
+    border-bottom: 150px solid #ff6347;
+}
+.success-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+.title {
+    padding: 0.5em 0 0.5em;
+    background: url(./img/line-fail.svg) center bottom no-repeat;
+    text-align: center;
+}
+.message {
+    font-size: 18px;
+    text-align: center;
+    padding: 0 20px;
+}
+.back-link {
+    font-size: 14px;
+    text-decoration:none;
+    border-bottom: 1px dotted #ff6347;
+    color: #ff6347;
+}
+@media(max-width:465px){
+    .title{
+        font-size: 1.5em;
+    }
+    .message{
+        font-size: 14px;
+    }
+}
+@media(max-width:340px){
+    .back-link {
+        font-size: 12px;
+    }
+}
