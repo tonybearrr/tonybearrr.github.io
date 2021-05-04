@@ -1,0 +1,44 @@
+td {
+    width: 250px;
+    padding: .9em .75em !important;
+}
+
+th {
+    text-align: center !important;
+}
+
+.btn-wrap {
+    display: flex;
+}
+
+.edit-user,
+.update-user {
+    margin-right: 5px;
+}
+
+.field {
+    position: relative;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.table {
+    margin: 30px auto;
+}
+
+.columns {
+    margin-left: 7%;
+    justify-content: center;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.help {
+    position: absolute;
+    bottom: -16px;
+}

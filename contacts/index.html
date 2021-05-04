@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2 SPA</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1 class="subtitle" style="display: flex; justify-content: center; margin:30px 0">User List</h1>
+    <div class="container">
+        <table class="table is-bordered">
+            <thead>
+                <tr>
+                    <th>User name</th>
+                    <th>Phone number</th>
+                </tr>
+            </thead>
+            <tbody class="users-list"></tbody>
+            <script type="text/template" class="users-list-template">
+                <td>
+                    <div class="field">
+                        <span class="user"><%= user %></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="field">
+                        <span class="phone"><%= phone %></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="btn-wrap">
+                        <button class="button is-link edit-user full-width"><i class="fas fa-pencil-alt" style="margin-right:10px; font-size:13px;"></i> Edit</button>
+                        <button class="button is-success update-user full-width" style="display:none;"><i class="fas fa-check" style="margin-right:10px; font-size:15px;"></i>Update</button>
+                        <button class="button is-danger delete-user full-width"><i class="fas fa-trash" style="margin-right:10px; font-size:13px;"></i>Delete</button>
+                        <button class="button is-warning cancel-user full-width" style="display:none;"><i class="fas fa-ban" style="margin-right:10px; font-size:15px;"></i>Cancel</button></td>
+                    </div>
+            </script>
+        </table>
+        <section class="columns">
+            <div class="column is-3">
+                <div class="field">
+                    <input class="user-input input" id="name" placeholder="User name" required>
+                    <p class="help name-validation-error is-danger"></p>
+                </div>
+            </div>
+            <div class="column is-3">
+                <div class="field">
+                    <input class="phone-input input" id="phone" placeholder="User phone" required>
+
+                    <p class="help phone-validation-error is-danger"></p>
+                </div>
+
+            </div>
+            <div class="column is-1">
+                <button class="button is-primary add-user full-width"><i class="fas fa-plus"
+                        style="margin-right:10px; font-size:15px;"></i> Add</button>
+            </div>
+            <div class="column is-1">
+            </div>
+        </section>
+        <div class=""></div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
