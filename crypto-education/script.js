@@ -1,7 +1,4 @@
-// resize();
 window.addEventListener('resize', resize);
-
-
 
 let openModalBtn = document.querySelector('.registration-btn');
 let modal = document.querySelector('.modal');
@@ -35,28 +32,19 @@ burgerBtn.addEventListener('click', function(){
     if(burgerMenu.style.display === 'none'){
         burgerMenu.style.display = 'block'
         burgerBtn.setAttribute('src', './img/close-button.svg')
-        // burgerBtnClose.style.display = 'block';
-
     }else{
         burgerMenu.style.display = 'none';
         burgerBtn.setAttribute('src', './img/menu.svg')
-
-        // burgerBtnClose.style.display = 'none';
-
     }
 })
 
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {checkOffset()};
 
-// Get the header
 let header = document.querySelector("#menu");
 let logo = document.querySelector(".logo")
-// Get the offset position of the navbar
 let sticky = header.offsetTop + 20;
 
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
+function checkOffset() {
   if (window.pageYOffset >= sticky) {
     header.classList.add("sticky");
     logo.classList.add("logo-sticky")
